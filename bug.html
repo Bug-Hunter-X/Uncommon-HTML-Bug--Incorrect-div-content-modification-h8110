@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    //Incorrect way to change the content of the div element.
+    document.getElementById("myDiv").textContent = "This text will not be visible";
+
+    // The correct way to change the content of the div element is to use innerHTML or textContent
+    document.getElementById('myDiv').innerHTML = "<p>This text is visible now.</p>";
+
+    //Example using textContent:
+    document.getElementById('myDiv').textContent = "This text is visible now using textContent";
+  </script>
+</body>
+</html>
